@@ -1,7 +1,8 @@
 const board = document.querySelector(".board");
 const labelUserSize = document.querySelector("#user-size-label");
 const userSize = document.querySelector("#user-size");
-const btnSubmit = document.querySelector(".submit");
+const btnSubmit = document.querySelector("#submit-size");
+const userColor = document.querySelector("#user-color");
 
 function setSize() {
     const size = userSize.value;
@@ -14,7 +15,7 @@ function setSize() {
         div.style.backgroundColor = ("white");
         div.style.border = ("1px solid gray");
         div.addEventListener("mouseover", () => {
-            div.style.backgroundColor = ("black");
+            div.style.backgroundColor = userColor.value;
         })
         board.insertAdjacentElement("beforeend", div);
     }
